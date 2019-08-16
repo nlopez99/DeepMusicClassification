@@ -1,0 +1,2 @@
+cnn_weights.h5 filter=lfs diff=lfs merge=lfs -text
+y_data.pkl filter=lfs diff=lfs merge=lfs -text
