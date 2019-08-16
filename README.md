@@ -50,30 +50,29 @@
   </a>
 </p>
 
-Nmap is an extrememly powerful tool for pen testing, PyNmapGUI offers a graphical user interface to scan networks as an alternative to ZenMap.
+The goal of this project is to utilize the GTZAN dataset to train a convolutional neural network to classify melspectrograms into music genres.
 
-Here's why:
-* Beginners shouldn't worry about crafting verbose command line arguments at first, they should get hands on with the tool
-* You shouldn't be typing the same bash command, trying different configs, and making sure you save the output
-* Trying Nmap should be easy to try:smile:
+About the model:
+* The neural network topology includes 4 Convolutional layers
+* The model includes batch normalization, L2 penalty for weight biases, and dropout layer to reduce overfitting
+* Tensorboard callback for tracking model performance:smile:
 
-Of course, this tool does not exist as a replacement to command line Nmap usage. This tool serves as a means to run basic Nmap commands within a graphical interface.
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python 3](https://www.python.org)
-* [python-nmap](https://xael.org/norman/python/python-nmap/)
-* [PyQt5](https://pypi.org/project/PyQt5/)
+* [Keras](https://keras.io/)
+* [TensorFlow](https://www.tensorflow.org/)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get PyNmapGUI up and running locally, [Python3.5<](https://www.python.org/downloads/release/python-374/) must be installed and added to PATH.  
+To get DeepMusicClassification up and running locally, [Python3.5<](https://www.python.org/downloads/release/python-374/) must be installed and added to PATH.  
 
 ### Prerequisites
-Additional prerequisites to get PyNmapGUI up and running.
+Additional prerequisites to get DeepMusicClassification up and running.
 * Update pip3 for most Linux ditros
 ```sh
 sudo -H pip3 install --upgrade pip
@@ -87,32 +86,27 @@ python3 -m pip3 install --upgrade pip
 
 1. Clone the repo
 ```sh
-git clone https:://github.com/nlopez99/PyNmapGUI.git
+git clone https:://github.com/nlopez99/DeepMusicClassification.git
 ```
 2. Pip3 install packages
 ```sh
 pip3 install -r requirements.txt
 ```
-3. Install NMAP `nmap`
-```sh
-sudo apt-get install nmap
-```
+3. Download [GTZAN](http://opihi.cs.uvic.ca/sound/genres.tar.gz) dataset and extract it to the datasets folder
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To finally run PyNmapGUI, double click the .py file or run 
+To train the model run
 ```sh
-python3 PyNmapGUI.py
+python3 main.py -t train -d datasets/genres -e 20
 ```
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/nlopez99/PyNmapGUI/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/nlopez99/DeepMusicClassification/issues) for a list of proposed features (and known issues).
 
 
 
@@ -141,14 +135,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Nino Lopez - [@Nino_Lopez](https://twitter.com/Nino_Lopez) - antonino.lopez@spartans.ut.edu
 
-Project Link: [https://github.com/nlopez99/PyNmapGUI/](https://github.com/nlopez99/PyNmapGUI/)
+Project Link: [https://github.com/nlopez99/PyNmapGUI/](https://github.com/nlopez99/DeepMusicClassification/)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [python-nmap](https://xael.org/norman/python/python-nmap/)
-* [PyQt5](https://pypi.org/project/PyQt5/)
+* [Keras](https://keras.io/)
+* [TensorFlow](https://www.tensorflow.org/)
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
 
