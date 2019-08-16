@@ -41,7 +41,6 @@
 * [Acknowledgements](#acknowledgements)
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
@@ -59,11 +58,9 @@ About the model:
 
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Python 3](https://www.python.org)
 * [Keras](https://keras.io/)
 * [TensorFlow](https://www.tensorflow.org/)
-
 
 
 <!-- GETTING STARTED -->
