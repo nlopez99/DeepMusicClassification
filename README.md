@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://www.python.org">
-    <img src="images/Python.png" alt="Python" width="400" height="175">
+    <img src="assets/Python.png" alt="Python" width="400" height="175">
   </a>
 
   <h3 align="center">DeepMusicClassification</h3>
@@ -162,4 +162,4 @@ Project Link: [https://github.com/nlopez99/PyNmapGUI/](https://github.com/nlopez
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nino-lopez-tampa/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: assets/screenshot.png
