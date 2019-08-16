@@ -45,8 +45,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p align="center">
-  <a href="https://github.com/nlopez99/PyNmapGUI">
-    <img src="images/screenshot.png" alt="Python" width="621" height="400">
+  <a href="https://github.com/nlopez99/DeepMusicClassification">
+    <img src="assets/screenshot.png" alt="Python" width="621" height="400">
   </a>
 </p>
 
