@@ -49,7 +49,7 @@
   </a>
 </p>
 
-The goal of this project is to utilize the GTZAN dataset to train a convolutional neural network to classify melspectrograms into music genres.
+The goal of this project is to utilize the GTZAN dataset to train a convolutional neural network to classify melspectrograms into music genres. After training the model for some time, it reached 70.6% accuracy on the testing dataset. 
 
 About the model:
 * The neural network topology includes 4 Convolutional layers
