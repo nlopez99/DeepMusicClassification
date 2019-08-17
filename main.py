@@ -1,8 +1,6 @@
 import os
 import pickle
 import argparse as ag
-import datetime
-import random
 import warnings
 from dataset_tools import convert_au_to_wav, build_training_data, slice_audio
 from dataset_tools import slice_dataset, clean_up_files, preprocess_data
