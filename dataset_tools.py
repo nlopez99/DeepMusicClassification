@@ -8,6 +8,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.utils import to_categorical
 from sklearn.preprocessing import LabelEncoder
+import pickle
 
 
 def convert_au_to_wav(data_dir, genres):
@@ -25,6 +26,7 @@ def convert_au_to_wav(data_dir, genres):
                     .output(f"{os.path.join(current_genre_path, base_name)}.wav")
                     .run()
                 )
+                os.remove(os.path.join(current_genre_path, file))
 
 
 def slice_audio(audio_file, end=3):
@@ -37,8 +39,8 @@ def slice_audio(audio_file, end=3):
     for i in range(10):
         audio_slice = audio[start:end]
         slices.append(audio_slice)
-        start += (1000 * end)
-        end += (1000 * end)
+        start += 3000
+        end += 3000
 
     return slices
 
@@ -54,14 +56,14 @@ def slice_dataset(data_dir, genres):
                 song_genre = file.split('.')[0]
                 audio_file = os.path.join(current_genre_path, file)
                 audio_slices = slice_audio(audio_file)
+                audio_path = os.path.join(current_genre_path, song_genre)
 
                 for audio in audio_slices:
-                    os.chdir(current_genre_path)
-                    audio.export(f"{genre}.{current_index}.wav", format="wav")
+                    audio.export(f"{audio_path}.{current_index}.wav", format="wav")
                     current_index += 1
 
 
-def clean_up_files(data_dir, genre):
+def clean_up_files(data_dir, genres):
     """ Iterates through dataset and removes original whole audio files """
     regexp = re.compile(r"\d\d\d\d\d")
     for genre in genres:
@@ -86,16 +88,19 @@ def build_training_data(data_dir, genres, width, height):
                 class_num = genres.index(song_genre)
 
                 song_path = os.path.join(root, file)
-                y, sr = lr.load(song_path, sr=22050)
+                audio, sr = lr.load(song_path, sr=22050)
 
-                spectrogram = lr.feature.melspectrogram(y=y, sr=sr)
+                spectrogram = lr.feature.melspectrogram(y=audio, sr=sr)
                 img = cv2.resize(spectrogram, (width, height))
                 training_data.append([img, song_genre])
 
-    return training_data
+    X = [img for img, _ in training_data]
+    y = [label for _, label in training_data]
+
+    return X, y
 
 
-def preprocess_data(X, y):
+def preprocess_data(X, y, width, height):
     """ Reshapes arrays and converts labels to one-hot arrays and splits to train and test """
     X = np.array(X).reshape(-1, width, height, 1)
     y = np.array(y)
@@ -104,7 +109,6 @@ def preprocess_data(X, y):
     y = label_encoder.fit_transform(y)
     y = to_categorical(y)
 
-    print('Done...')
     X = X / 255.0  # normalize pixel values
 
     X_train, X_test, y_train, y_test = train_test_split(
