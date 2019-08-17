@@ -17,9 +17,9 @@
   <p align="center">
     An Implementation of a Convolutional Neural Network to Classify Music Genres
     <br />
-    <a href="https://github.com/nlopez99/PyNmapGUI/issues">Report Bug</a>
+    <a href="https://github.com/nlopez99/DeepMusicClassification/issues">Report Bug</a>
     ·
-    <a href="https://github.com/nlopez99/PyNmapGUI/issues">Request Feature</a>
+    <a href="https://github.com/nlopez99/DeepMusicClassification/issues">Request Feature</a>
   </p>
 </p>
 
@@ -45,7 +45,7 @@
 ## About The Project
 <p align="center">
   <a href="https://github.com/nlopez99/DeepMusicClassification">
-    <img src="assets/screenshot.png" alt="Python" width="621" height="400">
+    <img src="assets/topology.png" alt="Python" width="1200" height="1800">
   </a>
 </p>
 
@@ -95,9 +95,13 @@ pip3 install -r requirements.txt
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-To train the model run
+To train the model run:
 ```sh
-python3 main.py -t train -d datasets/genres -e 20
+python3 main.py -t train -d datasets/genres --epochs 20
+```
+To test the model against a song (WAV format) of your choosing:
+```sh
+python3 main.py -t test -s your_song.wav
 ```
 
 <!-- ROADMAP -->
@@ -126,14 +130,12 @@ Contributions are what make the open source community such an amazing place to b
 Distributed under the MIT License. See `LICENSE` for more information.
 
 
-
 <!-- CONTACT -->
 ## Contact
 
 Nino Lopez - [@Nino_Lopez](https://twitter.com/Nino_Lopez) - antonino.lopez@spartans.ut.edu
 
-Project Link: [https://github.com/nlopez99/PyNmapGUI/](https://github.com/nlopez99/DeepMusicClassification/)
-
+Project Link: [https://github.com/nlopez99/DeepMusicClassification/](https://github.com/nlopez99/DeepMusicClassification/)
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -153,4 +155,4 @@ Project Link: [https://github.com/nlopez99/PyNmapGUI/](https://github.com/nlopez
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nino-lopez-tampa/
-[product-screenshot]: assets/screenshot.png
+[product-screenshot]: assets/topology.png
