@@ -1,22 +1,9 @@
-import ffmpeg
-import librosa as lr
-import os
-from tqdm import tqdm
-import re
-import cv2
-import numpy as np
-import random
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, BatchNormalization
 from tensorflow.keras.layers import Conv2D, MaxPooling2D
 from tensorflow.keras.callbacks import TensorBoard
 from tensorflow.keras.regularizers import l2
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
-import pickle
-from pydub import AudioSegment
 
 def create_model(input_shape):
     model = Sequential()
