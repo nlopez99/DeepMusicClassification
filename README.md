@@ -83,7 +83,7 @@ python3 -m pip3 install --upgrade pip
 
 1. Clone the repo
 ```sh
-git clone https:://github.com/nlopez99/DeepMusicClassification.git
+git clone https://github.com/nlopez99/DeepMusicClassification.git
 ```
 2. Pip3 install packages
 ```sh
