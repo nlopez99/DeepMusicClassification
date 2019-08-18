@@ -89,7 +89,7 @@ def main(args):
         # convert slices to spectrogram and convert to respective array
         song_data = []
         for i in range(10):
-            audio, sr = lr.load(f'song{str(idx)}.wav', sr=22050)
+            audio, sr = lr.load(f'song{str(i)}.wav', sr=22050)
             spectrogram = lr.feature.melspectrogram(y=audio, sr=sr)
             img = cv2.resize(spectrogram, (WIDTH, HEIGHT))
             X = np.array(img).reshape(-1, WIDTH, HEIGHT, 1)
