@@ -47,8 +47,7 @@ def slice_audio(audio_file, end=3):
 
 def slice_dataset(data_dir, genres):
     """ Iterates through entire dataset and converts every audio file to 3 second slices """
-    for genre in genres:
-        current_index = 0
+    for index, genre in enumerate(genres):
         current_genre_path = os.path.join(data_dir, genre)
 
         for root, dirs, files in os.walk(current_genre_path):
@@ -59,8 +58,7 @@ def slice_dataset(data_dir, genres):
                 audio_path = os.path.join(current_genre_path, song_genre)
 
                 for audio in audio_slices:
-                    audio.export(f"{audio_path}.{current_index}.wav", format="wav")
-                    current_index += 1
+                    audio.export(f"{audio_path}.{index}.wav", format="wav")
 
 
 def clean_up_files(data_dir, genres):
