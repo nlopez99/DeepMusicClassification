@@ -6,7 +6,6 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
 <p align="center">
   <a href="https://www.python.org">
     <img src="assets/Python.png" alt="Python" width="400" height="175">
