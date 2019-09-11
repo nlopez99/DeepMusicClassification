@@ -48,7 +48,7 @@
   </a>
 </p>
 
-The goal of this project is to utilize the GTZAN dataset to train a convolutional neural network to classify melspectrograms into music genres. After training the model for some time, it reached 70.6% accuracy on the testing dataset. 
+The goal of this project is to utilize the GTZAN dataset to train a convolutional neural network to classify melspectrograms into music genres. After training the model for some time, it reached 70.6% accuracy on the testing dataset.
 
 About the model:
 * The neural network topology includes 4 Convolutional layers
@@ -65,7 +65,7 @@ About the model:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get DeepMusicClassification up and running locally, [Python3.5<](https://www.python.org/downloads/release/python-374/) must be installed and added to PATH.  
+To get DeepMusicClassification up and running locally, [Python3.5<](https://www.python.org/downloads/release/python-374/) must be installed and added to PATH.
 
 ### Prerequisites
 Additional prerequisites to get DeepMusicClassification up and running.
@@ -141,6 +141,7 @@ Project Link: [https://github.com/nlopez99/DeepMusicClassification/](https://git
 ## Acknowledgements
 * [Keras](https://keras.io/)
 * [TensorFlow](https://www.tensorflow.org/)
+* [Python3](https://python.org/)
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
 
