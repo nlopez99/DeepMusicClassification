@@ -7,4 +7,4 @@ librosa==0.7.0
 opencv-contrib-python==4.1.0.25
 opencv-python==4.1.0.25
 ffmpeg-python==0.2.0
-numpy==1.16.2
+numpy==1.22.0
